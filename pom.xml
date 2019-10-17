@@ -122,11 +122,11 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>${mysql-driver.version}</version>
     </dependency>
-    <!-- 引入c3p0数据库连接池 -->
+    <!-- 引入druid数据库连接池 -->
     <dependency>
-      <groupId>c3p0</groupId>
-      <artifactId>c3p0</artifactId>
-      <version>0.9.1.2</version>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.0.20</version>
     </dependency>
 
     <!-- 添加fastjson -->
