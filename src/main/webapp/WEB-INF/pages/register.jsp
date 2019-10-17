@@ -53,7 +53,7 @@
 <div class="register-container container">
     <div class="row">
         <div class="register span6">
-            <form action="" method="post">
+            <form action="/user/register" method="post">
                 <h2>REGISTER TO <span class="red"><strong>WebSite</strong></span></h2>
                 <label for="username">username</label>
                 <input type="text" id="username" name="username" placeholder="enter your username...">
