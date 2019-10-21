@@ -13,6 +13,7 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
     @Override
     public String search(Map map) {
+        String nickname = userDao.search(map);
         return userDao.search(map);
     }
 

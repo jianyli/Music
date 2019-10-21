@@ -8,6 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,7 +30,7 @@ public class UserController {
         return "/pages/login";
     }
     @RequestMapping("/login")
-    public String login(@Param("username") String username,@Param("password") String password, Model model) {
+    public String login(@Param("username") String username, @Param("password") String password, Model model, HttpServletResponse response) throws UnsupportedEncodingException {
         Map<String,String> map = new HashMap<>();
         map.put("username",username);
         map.put("password",password);
@@ -34,7 +39,11 @@ public class UserController {
             model.addAttribute("errorMsg","用户名或密码错误");
             return "/pages/login";
         }
+        Cookie cookie = new Cookie("nickname", URLEncoder.encode(nickname,"UTF-8"));
+        cookie.setMaxAge(1 * 60);
+        cookie.setPath("/");
         model.addAttribute("nickname",nickname);
+        response.addCookie(cookie);
         return "../index";
     }
     /**

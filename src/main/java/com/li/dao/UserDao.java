@@ -9,4 +9,5 @@ import java.util.Map;
 public interface UserDao {
     String search(Map map);
     int createUser(User user);
+    User find(String id);
 }

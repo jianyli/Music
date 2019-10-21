@@ -24,7 +24,7 @@
                 <li class="activate"><a>BioInformatics</a></li>
                 <li><a href="#">GAME</a></li>
                 <li><a>BLOG</a></li>
-                <li><a href="/mood/findAll">Mood</a> </li>
+                <li><a href="/mood/findAllForRedis">Mood</a> </li>
                 <li class="dropdown" style="text-shadow: rgb(143, 108, 108) 1px 1px 1px;">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <span class="glyphicon glyphicon-music"></span> &nbsp;MUSIC <b class="caret"></b>
